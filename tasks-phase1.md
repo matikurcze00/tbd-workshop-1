@@ -11,6 +11,7 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
 2. Follow all steps in README.md.
 
 3. Select your project and set budget alerts on 5%, 25%, 50%, 80% of 50$ (in cloud console -> billing -> budget & alerts -> create buget; unclick discounts and promotions&others while creating budget).
+ ![image](https://github.com/matikurcze00/tbd-workshop-1/assets/80173470/9927615e-659c-4b0b-8ac5-1f7502193401)
 
   ![img.png](doc/figures/discounts.png)
 
@@ -25,8 +26,33 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
 
 
 8. Analyze terraform code. Play with terraform plan, terraform graph to investigate different modules.
+Moduł dataproc zarządza klastrami Google Dataproc w Google Cloud, włączając wymagane usługi i korzystając z konfiguracji określonej przez zmienne, takie jak typ maszyny czy wersja obrazu. Dzięki integracji z Google Cloud Platform, moduł ten pozwala na efektywne wykorzystanie zasobów chmurowych, optymalizując koszty i poprawiając wydajność operacji. Graf wykonania Terraform pokazuje kolejność tworzenia, aktualizacji lub usuwania zasobów, zapewniając kontrolowane i przewidywalne zmiany infrastruktury.
 
-    ***describe one selected module and put the output of terraform graph for this module here***
+Graf 
+digraph {
+        compound = "true"
+        newrank = "true"
+        subgraph "root" {
+                "[root] google_dataproc_cluster.tbd-dataproc-cluster (expand)" [label = "google_dataproc_cluster.tbd-dataproc-cluster", shape = "box"]
+                "[root] google_project_service.dataproc (expand)" [label = "google_project_service.dataproc", shape = "box"]
+                "[root] provider[\"registry.terraform.io/hashicorp/google\"]" [label = "provider[\"registry.terraform.io/hashicorp/google\"]", shape = "diamond"]
+                "[root] var.image_version" [label = "var.image_version", shape = "note"]
+                "[root] var.machine_type" [label = "var.machine_type", shape = "note"]
+                "[root] var.project_name" [label = "var.project_name", shape = "note"]
+                "[root] var.region" [label = "var.region", shape = "note"]
+                "[root] var.subnet" [label = "var.subnet", shape = "note"]
+                "[root] google_dataproc_cluster.tbd-dataproc-cluster (expand)" -> "[root] google_project_service.dataproc (expand)"
+                "[root] google_dataproc_cluster.tbd-dataproc-cluster (expand)" -> "[root] var.image_version"
+                "[root] google_dataproc_cluster.tbd-dataproc-cluster (expand)" -> "[root] var.machine_type"
+                "[root] google_dataproc_cluster.tbd-dataproc-cluster (expand)" -> "[root] var.project_name"
+                "[root] google_dataproc_cluster.tbd-dataproc-cluster (expand)" -> "[root] var.region"
+                "[root] google_dataproc_cluster.tbd-dataproc-cluster (expand)" -> "[root] var.subnet"
+                "[root] google_project_service.dataproc (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/google\"]"
+                "[root] output.dataproc_cluster_name (expand)" -> "[root] google_dataproc_cluster.tbd-dataproc-cluster (expand)"
+                "[root] provider[\"registry.terraform.io/hashicorp/google\"] (close)" -> "[root] google_dataproc_cluster.tbd-dataproc-cluster (expand)"
+                "[root] root" -> "[root] output.dataproc_cluster_name (expand)"
+                "[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+                
    
 9. Reach YARN UI
    
