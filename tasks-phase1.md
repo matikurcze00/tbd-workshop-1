@@ -62,9 +62,10 @@ Moduł dataproc zarządza klastrami Google Dataproc w Google Cloud, włączając
 For all the resources of type: `google_artifact_registry`, `google_storage_bucket`, `google_service_networking_connection`
 create a sample usage profiles and add it to the Infracost task in CI/CD pipeline. Usage file [example](https://github.com/infracost/infracost/blob/master/infracost-usage-example.yml) 
 
-   ***place the expected consumption you entered here***
+   [File](https://github.com/matikurcze00/tbd-workshop-1/blob/dev/task-1/infracost-usage.yml)
 
-   ***place the screenshot from infracost output here***
+  ![image](https://github.com/matikurcze00/tbd-workshop-1/assets/80173470/d8a8bedc-ea96-4386-8d75-93ee64686365)
+
 
 11. Create a BigQuery dataset and an external table using SQL
     
