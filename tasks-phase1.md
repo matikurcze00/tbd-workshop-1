@@ -4,16 +4,25 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
 
 1. Authors:
 
-   303763
+Grupa 6.
+
+Mateusz Roszkowski (303763)
+
+Jan Rybarczyk (304085)
+
+Aleksandra Sobala (309420)
 
    https://github.com/matikurcze00/tbd-workshop-1
 
-2. Follow all steps in README.md.
+3. Follow all steps in README.md.
 
-3. Select your project and set budget alerts on 5%, 25%, 50%, 80% of 50$ (in cloud console -> billing -> budget & alerts -> create buget; unclick discounts and promotions&others while creating budget).
- ![image](https://github.com/matikurcze00/tbd-workshop-1/assets/80173470/9927615e-659c-4b0b-8ac5-1f7502193401)
+
+4. Select your project and set budget alerts on 5%, 25%, 50%, 80% of 50$ (in cloud console -> billing -> budget & alerts -> create buget; unclick discounts and promotions&others while creating budget).
+
 
   ![img.png](doc/figures/discounts.png)
+  ![322226905-9927615e-659c-4b0b-8ac5-1f7502193401](https://github.com/matikurcze00/tbd-workshop-1/assets/88709044/aef3d489-37fd-48d3-86a1-9e04e0e378ac)
+
 
 5. From avaialble Github Actions select and run destroy on main branch.
    
@@ -21,42 +30,23 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
     1. Modify tasks-phase1.md file.
     
     2. Create PR from this branch to **YOUR** master and merge it to make new release. 
-    
-    ***place the screenshot from GA after succesfull application of release***
 
+![ga](https://github.com/matikurcze00/tbd-workshop-1/assets/88709044/98a7fbc3-c742-4803-b621-0b87eeba2a3e)
 
 8. Analyze terraform code. Play with terraform plan, terraform graph to investigate different modules.
+
+    ***describe one selected module and put the output of terraform graph for this module here***
+
 Moduł dataproc zarządza klastrami Google Dataproc w Google Cloud, włączając wymagane usługi i korzystając z konfiguracji określonej przez zmienne, takie jak typ maszyny czy wersja obrazu. Dzięki integracji z Google Cloud Platform, moduł ten pozwala na efektywne wykorzystanie zasobów chmurowych, optymalizując koszty i poprawiając wydajność operacji. Graf wykonania Terraform pokazuje kolejność tworzenia, aktualizacji lub usuwania zasobów, zapewniając kontrolowane i przewidywalne zmiany infrastruktury.
 
-Graf 
-digraph {
-        compound = "true"
-        newrank = "true"
-        subgraph "root" {
-                "[root] google_dataproc_cluster.tbd-dataproc-cluster (expand)" [label = "google_dataproc_cluster.tbd-dataproc-cluster", shape = "box"]
-                "[root] google_project_service.dataproc (expand)" [label = "google_project_service.dataproc", shape = "box"]
-                "[root] provider[\"registry.terraform.io/hashicorp/google\"]" [label = "provider[\"registry.terraform.io/hashicorp/google\"]", shape = "diamond"]
-                "[root] var.image_version" [label = "var.image_version", shape = "note"]
-                "[root] var.machine_type" [label = "var.machine_type", shape = "note"]
-                "[root] var.project_name" [label = "var.project_name", shape = "note"]
-                "[root] var.region" [label = "var.region", shape = "note"]
-                "[root] var.subnet" [label = "var.subnet", shape = "note"]
-                "[root] google_dataproc_cluster.tbd-dataproc-cluster (expand)" -> "[root] google_project_service.dataproc (expand)"
-                "[root] google_dataproc_cluster.tbd-dataproc-cluster (expand)" -> "[root] var.image_version"
-                "[root] google_dataproc_cluster.tbd-dataproc-cluster (expand)" -> "[root] var.machine_type"
-                "[root] google_dataproc_cluster.tbd-dataproc-cluster (expand)" -> "[root] var.project_name"
-                "[root] google_dataproc_cluster.tbd-dataproc-cluster (expand)" -> "[root] var.region"
-                "[root] google_dataproc_cluster.tbd-dataproc-cluster (expand)" -> "[root] var.subnet"
-                "[root] google_project_service.dataproc (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/google\"]"
-                "[root] output.dataproc_cluster_name (expand)" -> "[root] google_dataproc_cluster.tbd-dataproc-cluster (expand)"
-                "[root] provider[\"registry.terraform.io/hashicorp/google\"] (close)" -> "[root] google_dataproc_cluster.tbd-dataproc-cluster (expand)"
-                "[root] root" -> "[root] output.dataproc_cluster_name (expand)"
-                "[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/google\"] (close)"
-                
+![graph](https://github.com/matikurcze00/tbd-workshop-1/assets/88709044/550faccb-c54b-4d6a-aa95-152aad48e358)
+
+
    
 9. Reach YARN UI
    
-   ***place the command you used for setting up the tunnel, the port and the screenshot of YARN UI here***
+   ![image](https://github.com/matikurcze00/tbd-workshop-1/assets/101199483/d6d45580-7cd7-4fce-8060-20962cca782e)
+
    
 10. Draw an architecture diagram (e.g. in draw.io) that includes:
     1. VPC topology with service assignment to subnets
@@ -65,14 +55,17 @@ digraph {
     4. Description of network communication (ports, why it is necessary to specify the host for the driver) of Apache Spark running from Vertex AI Workbech
   
     ***place your diagram here***
+![Architektura_TBD](https://github.com/matikurcze00/tbd-workshop-1/assets/88709044/0d5cf1ea-4a9d-43e5-96d3-6197f74f8de6)
+
 
 11. Create a new PR and add costs by entering the expected consumption into Infracost
 For all the resources of type: `google_artifact_registry`, `google_storage_bucket`, `google_service_networking_connection`
 create a sample usage profiles and add it to the Infracost task in CI/CD pipeline. Usage file [example](https://github.com/infracost/infracost/blob/master/infracost-usage-example.yml) 
 
-   ***place the expected consumption you entered here***
+   [File](https://github.com/matikurcze00/tbd-workshop-1/blob/dev/task-1/infracost-usage.yml)
 
-   ***place the screenshot from infracost output here***
+  ![image](https://github.com/matikurcze00/tbd-workshop-1/assets/80173470/d8a8bedc-ea96-4386-8d75-93ee64686365)
+
 
 11. Create a BigQuery dataset and an external table using SQL
     
