@@ -13,6 +13,8 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
 3. Select your project and set budget alerts on 5%, 25%, 50%, 80% of 50$ (in cloud console -> billing -> budget & alerts -> create buget; unclick discounts and promotions&others while creating budget).
 
   ![img.png](doc/figures/discounts.png)
+  ![322226905-9927615e-659c-4b0b-8ac5-1f7502193401](https://github.com/matikurcze00/tbd-workshop-1/assets/88709044/aef3d489-37fd-48d3-86a1-9e04e0e378ac)
+
 
 5. From avaialble Github Actions select and run destroy on main branch.
    
