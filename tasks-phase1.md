@@ -20,9 +20,8 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
     1. Modify tasks-phase1.md file.
     
     2. Create PR from this branch to **YOUR** master and merge it to make new release. 
-    
-    ***place the screenshot from GA after succesfull application of release***
 
+![ga](https://github.com/matikurcze00/tbd-workshop-1/assets/88709044/98a7fbc3-c742-4803-b621-0b87eeba2a3e)
 
 8. Analyze terraform code. Play with terraform plan, terraform graph to investigate different modules.
 
