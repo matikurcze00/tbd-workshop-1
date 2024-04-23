@@ -34,6 +34,11 @@ Aleksandra Sobala (309420)
 8. Analyze terraform code. Play with terraform plan, terraform graph to investigate different modules.
 
     ***describe one selected module and put the output of terraform graph for this module here***
+
+Moduł dataproc zarządza klastrami Google Dataproc w Google Cloud, włączając wymagane usługi i korzystając z konfiguracji określonej przez zmienne, takie jak typ maszyny czy wersja obrazu. Dzięki integracji z Google Cloud Platform, moduł ten pozwala na efektywne wykorzystanie zasobów chmurowych, optymalizując koszty i poprawiając wydajność operacji. Graf wykonania Terraform pokazuje kolejność tworzenia, aktualizacji lub usuwania zasobów, zapewniając kontrolowane i przewidywalne zmiany infrastruktury.
+
+![graph](https://github.com/matikurcze00/tbd-workshop-1/assets/88709044/550faccb-c54b-4d6a-aa95-152aad48e358)
+
    
 9. Reach YARN UI
    
