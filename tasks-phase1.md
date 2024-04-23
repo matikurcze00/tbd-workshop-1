@@ -38,6 +38,8 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
     4. Description of network communication (ports, why it is necessary to specify the host for the driver) of Apache Spark running from Vertex AI Workbech
   
     ***place your diagram here***
+![Architektura_TBD](https://github.com/matikurcze00/tbd-workshop-1/assets/88709044/0d5cf1ea-4a9d-43e5-96d3-6197f74f8de6)
+
 
 11. Create a new PR and add costs by entering the expected consumption into Infracost
 For all the resources of type: `google_artifact_registry`, `google_storage_bucket`, `google_service_networking_connection`
