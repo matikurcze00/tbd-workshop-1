@@ -16,7 +16,9 @@ Aleksandra Sobala (309420)
 
 3. Follow all steps in README.md.
 
+
 4. Select your project and set budget alerts on 5%, 25%, 50%, 80% of 50$ (in cloud console -> billing -> budget & alerts -> create buget; unclick discounts and promotions&others while creating budget).
+
 
   ![img.png](doc/figures/discounts.png)
   ![322226905-9927615e-659c-4b0b-8ac5-1f7502193401](https://github.com/matikurcze00/tbd-workshop-1/assets/88709044/aef3d489-37fd-48d3-86a1-9e04e0e378ac)
@@ -38,6 +40,7 @@ Aleksandra Sobala (309420)
 Moduł dataproc zarządza klastrami Google Dataproc w Google Cloud, włączając wymagane usługi i korzystając z konfiguracji określonej przez zmienne, takie jak typ maszyny czy wersja obrazu. Dzięki integracji z Google Cloud Platform, moduł ten pozwala na efektywne wykorzystanie zasobów chmurowych, optymalizując koszty i poprawiając wydajność operacji. Graf wykonania Terraform pokazuje kolejność tworzenia, aktualizacji lub usuwania zasobów, zapewniając kontrolowane i przewidywalne zmiany infrastruktury.
 
 ![graph](https://github.com/matikurcze00/tbd-workshop-1/assets/88709044/550faccb-c54b-4d6a-aa95-152aad48e358)
+
 
    
 9. Reach YARN UI
