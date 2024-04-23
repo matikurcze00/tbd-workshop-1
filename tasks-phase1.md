@@ -29,7 +29,8 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
    
 9. Reach YARN UI
    
-   ***place the command you used for setting up the tunnel, the port and the screenshot of YARN UI here***
+   ![image](https://github.com/matikurcze00/tbd-workshop-1/assets/101199483/d6d45580-7cd7-4fce-8060-20962cca782e)
+
    
 10. Draw an architecture diagram (e.g. in draw.io) that includes:
     1. VPC topology with service assignment to subnets
