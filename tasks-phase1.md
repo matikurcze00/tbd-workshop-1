@@ -80,7 +80,12 @@ create a sample usage profiles and add it to the Infracost task in CI/CD pipelin
    
 13. Find and correct the error in spark-job.py
 
-    ***describe the cause and how to find the error***
+W szczegółach DAGu znajowały się logi błędu, który był powodowany przez złą konfigurację nazwy kubeła (gs://tbd-2024l-9910-data/data/shakespeare/). 
+W spark-job.py zmieniliśmy nazwę tego kubełka na naszą własną:
+
+DATA_BUCKET = "gs://tbd-2024l-303763-data/data/shakespeare/"
+
+
 
 14. Additional tasks using Terraform:
 
