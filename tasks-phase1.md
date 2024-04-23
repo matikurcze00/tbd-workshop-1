@@ -4,8 +4,11 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
 
 1. Authors:
 Grupa 6.
+
 Mateusz Roszkowski (303763)
+
 Jan Rybarczyk (304085)
+
 Aleksandra Sobala (309420)
 
    https://github.com/matikurcze00/tbd-workshop-1
