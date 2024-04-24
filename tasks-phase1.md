@@ -71,11 +71,14 @@ create a sample usage profiles and add it to the Infracost task in CI/CD pipelin
 
 
 11. Create a BigQuery dataset and an external table using SQL
+
+Aby wykonać to zadanie, w pierwszej kolejności trzeba było wykonać kroki z podpunkto 12 oraz 13, a także zmienić automatyczne ustawianie lokalizacji wykonywania zapytania, aby była spójna z klastrem oraz danymi.
     
-    ***place the code and output here***
+    ![image](https://github.com/matikurcze00/tbd-workshop-1/assets/101199483/33ec342e-291f-4120-a65a-0b1926b4c7b5)
+
    
     ***why does ORC not require a table schema?***
-
+Pliki ORC (Optimized Row Columnar) nie wymagają jawnego schematu tabeli, ponieważ są samoopisujące i zawierają metadane definiujące schemat w każdym pliku. Te metadane obejmują szczegółowe informacje na temat nazw kolumn, typów danych i struktury, dzięki czemu systemy odczytujące plik mogą automatycznie zrozumieć układ danych. 
   
 12. Start an interactive session from Vertex AI workbench:
 
