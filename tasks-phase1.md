@@ -79,16 +79,18 @@ create a sample usage profiles and add it to the Infracost task in CI/CD pipelin
   
 12. Start an interactive session from Vertex AI workbench:
 
-    ***place the screenshot of notebook here***
+   ![image](https://github.com/matikurcze00/tbd-workshop-1/assets/101199483/1d89e4ed-2e54-48f4-a222-55579157af00)
+
    
 13. Find and correct the error in spark-job.py
 
-W szczegółach DAGu znajowały się logi błędu, który był powodowany przez złą konfigurację nazwy kubeła (gs://tbd-2024l-9910-data/data/shakespeare/). 
+W szczegółach DAGu znajowały się logi błędu, który był powodowany przez złą konfigurację nazwy kubełka (gs://tbd-2024l-9910-data/data/shakespeare/). 
 W spark-job.py zmieniliśmy nazwę tego kubełka na naszą własną:
 
 DATA_BUCKET = "gs://tbd-2024l-303763-data/data/shakespeare/"
 
-
+![image](https://github.com/matikurcze00/tbd-workshop-1/assets/101199483/c0b5304d-9b7a-4c60-a703-0ee4449c8f08)
+Przed zmianą nazwy kubełka żaden job nie kończył się sukcesem. Po jego zaktualizowaniu job został ukończony pomyślnie.
 
 14. Additional tasks using Terraform:
 
