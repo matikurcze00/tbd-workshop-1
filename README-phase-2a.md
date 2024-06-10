@@ -18,9 +18,9 @@ Worth to read:
 
 2. Authors:
 
-   ***Enter your group nr***
+   ***Grupa nr 6***
 
-   ***Link to forked repo***
+   ***[Link to forked repo](https://github.com/matikurcze00/tbd-workshop-1)***
 
 3. Sync your repo with https://github.com/bdg-tbd/tbd-workshop-1.
 
