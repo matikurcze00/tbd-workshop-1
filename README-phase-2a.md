@@ -76,20 +76,38 @@ the running instance of your Vertex AI Workbench
 
 
 7. Explore files created by generator and describe them, including format, content, total size.
+![image](https://github.com/matikurcze00/tbd-workshop-1/assets/88709044/975265f5-d221-4018-9cd6-d66d8af3ef90)
 
-   ***Files desccription***
+batch 1. 
+- FINWIRE csv files 1967Q1 to 2017Q3, sizing from 160 KB to 10 MB.
+batch 2/3.
+- similar files, that are not only csv files, but also txt, sizing from 100 B to 1 GB.
 
 8. Analyze tpcdi.py. What happened in the loading stage?
 
-   ***Your answer***
+Firstly, it starts a Spark session and creates databases on Hive for 'digen', 'bronze', 'silver', and 'gold', setting 'digen' as the active database. Then, for each file (except FINWIRE, which is processed all at once), the script creates a DataFrame, applies the appropriate schema, and uploads the data to Google Cloud Storage blobs, saving the DataFrame as a table in the specified format.
 
 9. Using SparkSQL answer: how many table were created in each layer?
 
-   ***SparkSQL command and output***
+![image](https://github.com/matikurcze00/tbd-workshop-1/assets/88709044/b889c53a-1546-4fde-9015-c110feadd7b5)
+
 
 10. Add some 3 more [dbt tests](https://docs.getdbt.com/docs/build/tests) and explain what you are testing. ***Add new tests to your repository.***
 
-   ***Code and description of your tests***
+select *
+from {{ ref('dim_account') }}
+where effective_timestamp > end_timestamp
+- Test checks if in "dim_account" table there are creation timestamps later than end timestamps. 
+
+select *
+from {{ ref('dim_date') }}
+where day_of_week_desc not in ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')
+- Test checks if day names are correct
+
+select *
+from {{ source('hr', 'hr') }}
+WHERE employee_id = manager_id
+- Test check if there are employees who are their own manages:
 
 11. In main.tf update
    ```
