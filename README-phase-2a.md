@@ -118,4 +118,5 @@ WHERE employee_id = manager_id
 
 12. Redeploy infrastructure and check if the DAG finished with no errors:
 
-***The screenshot of Apache Aiflow UI***
+![image](https://github.com/matikurcze00/tbd-workshop-1/assets/88709044/019a92ac-3c0d-4d08-8cd0-bd94c9c9f97f)
+
