@@ -26,8 +26,9 @@ https://console.cloud.google.com/apis/api/compute.googleapis.com/quotas?project=
 in profiles.yml.
 
 4. In the notebook, collect console output from dbt run, then parse it and retrieve total execution time and execution times of processing each model. Save the results from each number of executors. 
+![image](https://github.com/matikurcze00/tbd-workshop-1/assets/88709044/b0d2da95-d6f9-4269-b46c-4b0317e1a237)
 
 5. Analyze the performance and scalability of execution times of each model. Visualize and discucss the final results.
+![Execution times](https://github.com/matikurcze00/tbd-workshop-1/assets/88709044/a3665077-23a1-42e9-a212-2f228fbd4107)
 
-
-   
+![Total execution time depending on number of executors](https://github.com/matikurcze00/tbd-workshop-1/assets/88709044/8166271a-0768-4532-aec0-6334e0651cfd)
