@@ -32,3 +32,5 @@ in profiles.yml.
 ![Execution times](https://github.com/matikurcze00/tbd-workshop-1/assets/88709044/a3665077-23a1-42e9-a212-2f228fbd4107)
 
 ![Total execution time depending on number of executors](https://github.com/matikurcze00/tbd-workshop-1/assets/88709044/8166271a-0768-4532-aec0-6334e0651cfd)
+
+The chart illustrates that the most significant performance improvement when increasing the number of executors occurs with the longest tasks. For shorter tasks, there is no noticeable increase in performance. This is likely because, for short tasks, the time spent initializing the task is greater than the time spent on the actual computation, meaning that adding more executors does not accelerate the process
